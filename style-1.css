@@ -1,0 +1,155 @@
+html {
+	scroll-behavior: smooth;
+}
+
+.title {
+	text-align: center;
+	text-decoration: underline;
+}
+
+nav {
+	color: white;
+	font-size: 20px;
+	margin: 0;
+  overflow: hidden;
+  background-color: green;
+  position: fixed;
+  top: 0;
+	right: 0;
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+	cursor: pointer;
+	padding: 5px;
+	border-bottom-left-radius: 15px
+}
+
+a.up {
+	font-size: 30px;
+	background-color: red;
+	padding: 5px;
+	border: solid;
+	border-color: red;
+	border-width: 5px;
+	border-radius: 50px;
+	position: fixed;
+	top: 85%;
+	left: 2.5%;
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+	cursor: pointer;
+	color: white;
+	text-decoration: none;
+}
+
+a.up:hover {
+	color: white;
+	text-decoration: none;
+}
+
+.center {
+	text-align: center;
+}
+
+.underline {
+	text-decoration: underline
+}
+
+h2 {
+	margin-left: 7.5%;
+}
+
+h5 {
+	margin-left: 5%;
+	color: grey
+}
+
+p {
+	font-size: 16;
+}
+
+a {
+	color: black;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: grey;
+	text-decoration: underline;
+}
+
+div.code {
+	padding: 5px;
+	border: 2px solid grey;
+  border-radius: 5px;
+	color: black;
+	background-color: lightgrey
+}
+
+code.code {
+	color: darkred;
+	background-color: lightgrey;
+	border-radius: 3px;
+}
+
+.indent {
+	margin-left: 20px;
+}
+
+.quote {
+	border-left: solid;
+	border-color: green;
+	border-width: 5px;
+	background-color: lightgreen;
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+	line-height: 15px;
+}
+
+div.quote p{
+	margin: 0;
+}
+
+header {
+	font-size: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: lightblue;
+}
+
+main {
+	text-align: left;
+	margin-left: calc(15% + 5px);
+	margin-right: calc(15% + 5px);
+	padding: 2.5%;
+}
+
+body {
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+}
+
+span.str{
+  color: rgb(201, 43, 43);
+}
+
+span.num{
+	color: rgb(20, 177, 177);
+}
+
+span.comment{
+	color: rgb(11, 97, 11);
+}
+
+span.key{
+	color: rgb(0, 68, 255);
+}

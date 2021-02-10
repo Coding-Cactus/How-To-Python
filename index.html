@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A guide on the basic aspects of python." >
+		<meta name="author" content="CodingCactus" >
+		<meta name="keywords" content="CodingCactus, python, how to python" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="images/py.png" rel="icon"/>
+    <title>How To Python</title>
+		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    
+
+		<header>
+			<div>
+				<h1 class="title" id="top">How to Python (GCSE/basics)</h1>
+				<h5>By CodingCactus</h5>
+			</div>
+
+			<nav onclick="changeTheme()">Click to change theme</nav>
+			<a class="up" href="#top">↑</a>
+
+		</header>
+
+		<main>
+			
+			
+			<h1>Contents</h1>
+			<ul>
+				<li><a href="#print">The Print Function</a></li>
+				<li><a href="#comment">Comments</a></li>
+				<li><a href="#data">Data Types</a></li>
+				<li><a href="#concat">Concatenation</a></li>
+				<li><a href="#var">Variables</a></li>
+				<li><a href="#input">Input Function</a></li>
+				<li><a href="#ops">Operators</a></li>
+				<li><a href="#comps">Comparatives</a></li>
+				<li><a href="#bool">Boolean Comparatives</a></li>
+				<li><a href="#if">Conditional Statements (if, elif, else)</a></li>
+				<li><a href="#while">While Loop</a></li>
+				<li><a href="#string">String Manipulation</a></li>
+				<li><a href="#lists">Lists</a></li>
+				<li><a href="#for">For Loops</a></li>
+				<li><a href="#libs">Standard Libraries</a></li>
+			</ul>
+
+			<hr>
+
+			<h1 id="print">The Print Function</h1>
+			<p>
+				The print function is what we use to output something to the console (the black thing at the side of/underneath your code.
+			</p>
+			<h3>How To Use</h3>
+			<p>To print something, we write:</p>
+			<div class="code">
+				<code>print()</code>
+			</div>
+			<p>
+				Inside the brackets is where we write what we want to print. If you want to print words, we put the text we want to write between "
+			</p>
+			<p>e.g.</p>
+			<div class="code">
+				<code>print("Hello World")</code>
+			</div>
+
+			<hr>
+
+			<h1 id="comment">Comments</h1>
+			<p>
+				A comment is just a line with anything written on, but isn't run. They are usually used to increase readability and explain parts of a program.
+			</p>
+			<p>
+				When you put a #, everything after that on that line will not be run (they will be a comment).
+			</p>
+			<p>e.g.</p>
+			<div class="code">
+				<code>print("Hello World")</code>
+				<code># This is a comment</code>
+				<br>
+				<code># The code above will output Hello World</code>
+			</div>
+
+			<hr>
+
+			<h1 id="data">Data Types</h1>
+			<p>
+				In python, you have different 'types' of data. This means that the way that they are used/handled is different.
+			</p>
+			<h3>There are 4 main different data types:</h3>
+			<ul>
+				<li>string = some text with no numerical value. e.g. <code class="code">"Hello World"</code></li>
+				<li>int = an integer value e.g. <code class="code">3</code></li>
+				<li>float = a decimal value e.g. <code class="code">3.1415</code></li>
+				<li>bool = a boolean value: <code class="code">True</code> or <code class="code">False</code></li>
+			</ul>
+			<h3>How to make them</h3>
+			<ul>
+				<li>string = anything with <code class="code">"</code> around it is a string</li>
+				<li>int = an integer (whole number) with no <code class="code">"</code> around it</li>
+				<li>float = a decimal value without <code class="code">"</code> around it</li>
+				<li>bool = <code class="code">True</code> or <code class="code">False</code> with no <code class="code">"</code> around it</li>
+			</ul>
+
+			<hr>
+
+			<h1 id="concat">Concatenation</h1>
+			<p>
+				Concatenation is where you combine strings together.
+			</p>
+			<p>
+				This is where data types are important. If you try to concatenate something which isn't a string, you will get an error.
+			</p>
+			<h3>How to do</h3>
+			<p>
+				To concatenate something, just simply put a <code class="code">+</code> between them.
+			</p>
+			<p>e.g.</p>
+			<div class="code">
+				<code>print("Hello " + "World")</code>
+			</div>
+			<br>
+			<div class="quote">
+				<p>
+					Remember to add a space after 'Hello' or before 'World', otherwise it will output 'HelloWorld'
+				<p>
+			</div>
+
+			<h3>Concatenating with something which isn't a string</h3>
+			<p>
+				You will get an error whenever you try to concatenate a string with another data type.<br> So how are you supposed to print a number with a string?
+			</p>
+			<p>
+				It is pretty simple, just turn the number into a string.
+			</p>
+			<p>e.g.</p>
+			<div class="code">
+				<code>print("Python is " + str(31) + " years old")</code>
+			</div>
+			<p>
+				That will convert the int into a string, which means that it can be concatenated successfully with the other strings.
+			</p>
+
+			<div class="quote">
+				<p>
+					Obviously, for this example, we could just do:
+				</p>
+				<code class="code">print("Python is 31 years old")</code>
+				<p></p>
+			</div>
+
+			<hr>
+
+			<h1 id="var">Variables</h1>
+			<p>A variable is a 'thing' that holds information for use later in a program.</p>
+			<h3>How to make a variable</h3>
+			<p>To declare a variable, simply write:</p>
+			<div class="code">
+				<code>varName = something</code>
+			</div>
+			<p>
+				Where <code class="code">varName</code> is replaced with what you want to name the variable.
+			</p>
+			<div class="quote">
+				<p>
+					Make sure that you name your variable something that describes the data that it holds (so not just 'a' or 'b' or something like that)
+				</p>
+			</div>
+			<p>
+				And <code class="code">something</code> is the piece of data that you want the variable to hold (i.e. an an int, string etc.).
+			</p>
+			<p>e.g.</p>
+			<div class="code">
+				<code>age = 31</code>
+				<br>
+				<code>print(age)</code>
+			</div>
+			<p>
+				Here, a variable is being made, called 'age', the int value '31' is then assigned to that variable.
+			</p>
+			<p>
+				The data stored in 'age' is then printed, which is '31'
+			</p>
+			<h3>Naming variables</h3>
+			<p>There are a few key rules when naming variables.</p>
+			<p>They are:</p>
+			<ul>
+				<li>No spaces</li>
+				<li>Don't start with a number</li>
+				<li>Not a keyword (e.g. print, int)</li>
+				<li>(Doesn't throw an error) don't start with capital letter</li>
+			</ul>
+			<h3>How to use</h3>
+			<p>To use a variable, all you need to do is write its name whenever you want the data stored in it to be used.</p>
+			<p>e.g.</p>
+			<div class="code">
+				<code>age = 14</code>
+				<br>
+				<code>print("Python is " + str(age) + " years old")</code>
+				<br>
+				<code># Notice that I have made 'age' a string so that it can be concatenated</code>
+			</div>
+			<p>Variables can be overwritten with other values.</p>
+			<p>e.g.</p>
+			<div class="code">
+				<code>age = 31</code>
+				<br>
+				<code>print("Python is " + str(age) + " years old")</code>
+				<br>
+				<code>age = age + 1</code>
+				<br>
+				<code># age is now 32</code>
+				<br>
+				<code>print("Next year Python will be " + str(age) + " years old")</code>
+				<br>
+			</div>
+
+			<hr>
+
+			<h1 id="input">Input Function</h3>
+			<p>The input function is where we can start to allow the user to interact with your program.</p>
+			<h3>How to use</h3>
+			<p>To use it, all you need to do is write <code class="code">input(prompt)</code>. Where <code class="code">prompt</code> is replaced with an appropriate string telling them what to input.</p>
+			<p>Normally, you will save their input to a variable, to do that all we need to write is <code class="code">varName = input(prompt)</code>.</p>
+			<p>
+				The input's data type will default to a string, but if you want to use their input in calculations, then you can do: <code class="code">int(input(prompt))</code> or <code class="code">float(input(prompt))</code> depending on what data type you want.
+			</p>
+
+			<div class="quote">
+				<p>
+					Be aware, that if you are doing <code class="code">int(input(prompt))</code> that if they were to input something other than an int (string, float etc.) then you will get an error.
+				</p>
+			</div>
+
+			<p>e.g.</p>
+			<div class="code">
+				<code>name = input("Enter name: ")</code>
+				<br>
+				<code>age = input("Enter age: ")</code>
+				<br>
+				<code>print("Hello " + name + ", you are " + age + " years old!")</code>
+			</div>
+
+			<hr>
+
+			<h1 id="ops">Operators</h1>
+			<p>Operators are the symbols that are used to perform mathematic calculations.</p>
+			<p>They are:</p>
+			<ul>
+				<li><code class="code">+</code> Adds numbers together</li>
+				<li><code class="code">-</code> Subtracts numbers</li>
+				<li><code class="code">*</code> Multiplies numbers</li>
+				<li><code class="code">**</code> Raises a number by another (e.g. 5**2 = 25)</Li>
+				<li><code class="code">/</code> Divides numbers</li>
+				<li><code class="code">//</code> Divides numbers, but gets rid of everything after the decimal point in the answer</li>
+				<li><code class="code">%</code> Divide numbers, but returns the remainder</li>
+			</ul>
+
+			<p>e.g.</p>
+			<p>To put seconds into minutes and seconds</p>
+			<div class="code">
+				<code>time = 80</code>
+				<br>
+				<code>minutes = time//60 # will return 1 in this situation</code>
+				<br>
+				<code>seconds = time%60 # will return 20 in this situation</code>
+				<br>
+				<code>print(minutes + "mins " + seconds + "secs")</code>
+			</div>
+			<br>
+			<div class="quote">
+				<p>
+					If you want to increase a variable by a certain amount, you can do <code class="code">varName += value</code> the <code class="code">+</code> can be replaced with any operator.
+				</p>
+			</div>
+
+
+			<hr>
+
+			<h1 id="comps">Comparatives</h1>
+
+			<p>Comparatives are what are used mainly in conditional statements, as they return the boolean values of <code class="code">True</code> or <code class="code">False</code>.</p>
+			<p>The Comparative operators are:</p>
+			<ul>
+				<li><code class="code">==</code> equal to</li>
+				<li><code class="code">!=</code> not equal to</li>
+				<li><code class="code"><</code> less than</li>
+				<li><code class="code">></code> greater than</li>
+				<li><code class="code"><=</code> less than or equal to</li>
+				<li><code class="code">>=</code> greater than or equal to</li>
+			</ul>
+
+			<div class="quote">
+				<p>
+					<code class="code">==</code> and <code class="code">!=</code> can be used with strings and bools as well as other data types, but the others can only be used with ints and floats.
+				</p>
+			</div>
+
+			<p>When you use these, they return a boolean value of <code class="code">True</code> or <code class="code">False</code>.</p>
+
+			<p>e.g.</p>
+			<div class="code">
+				<code>1 == 1    #True</code>
+				<br>
+				<code>15 != 15    #False</code>
+				<br>
+				<code>17 < 17    #False</code>
+				<br>
+				<code>21 >= 12    #True</code>
+				<br>
+				<code>14 > -12    #True</code>
+				<br>
+				<code>23 <= 23    #True</code>
+				<br>
+			</div>
+			<br>
+			<div class="quote">
+				<p>
+					Make sure that you use <code class="code">==</code> for equal to, <code class="code">=</code> is just for assigning variables.
+				</p>
+			</div>
+
+
+			<hr>
+
+			<h1 id="bool">Boolean Comparatives</h1>
+			
+			<p>They are used with the boolean values that are returned by other comparatives.</p>
+			<p>They are:</p>
+			<ul>
+				<li><code class="code">not</code> = will inverse the boolean value after it<br>e.g. <code class="code">not True</code> is <code class="code">False</code></li>
+				<li><code class="code">or</code> = will return <code class="code">True</code> if either of the Boolean values next to it, are <code class="code">True</code>.</li>
+				<li><code class="code">and</code> = will return <code class="code">True</code> if both of the Boolean values next to it are <code class="code">True</code>.</li>
+			</ul>
+			
+			<div class="code">
+				<code>14 == 14 or 13 < 14 #True</code>
+				<br>
+				<code>14 == 14 or 17 > 20 #True</code>
+				<br>
+				<code>12 <= 10 or 20 > 17 #True</code>
+				<br>
+				<code>12 <= 10 or 17 > 20 #False</code>
+				<br>
+			</div>
+			<br>
+			<div class="code">
+				<code>14 == 14 and 13 < 14 #True</code>
+				<br>
+				<code>14 == 14 and 17 > 20 #False</code>
+				<br>
+				<code>12 <= 10 and 20 > 17 #False</code>
+				<br>
+				<code>12 <= 10 and 17 > 20 #False</code>
+			</div>
+			<br>
+
+			<hr>
+
+			<h1 id="if">Conditional Statements (if, elif, else)</h1>
+
+			<p>
+				You will almost always need a Conditional Statement in your Python program, so it is very important that you understand what they do and how they work.
+			</p>
+			<p>We use things called 'if statements' to check if a certain piece of code should be run.</p>
+			<p>Indentation is very important in Python, extremely important here.</p>
+			<p>Basically, they will normally have a form of comparative statement and if that statement is <code class="code">True</code>, the indented code below will be run.</p>
+			
+			<p>A simple if statement will look something like:</p>
+			<div class="code">
+				<code>if num == num2:</code>
+				<br>
+				<code class="indent"># do something</code>
+			</div>
+
+			<p>Here you can see that a comparative is being used, which will return a Boolean value depending on what is stored in the variables.</p>
+			<p>The code on the indented lines below will only run if the expression is <code class="code">True</code>.</p>
+
+			<p>Another example:</p>
+			<div class="code">
+				<code>secretNum = 14</code>
+				<br>
+				<code>guess = int(input("Enter a number: "))</code>
+				<br>
+				<code>if guess == secretNum:</code>
+				<br>
+				<code class="indent">print("You guessed the secret number correctly!")</code>
+			</div>
+			<br>
+			<div class="quote">
+				<p>Don't do this:</p>
+				<div class="code">
+					<code>if num == 5 or 7 or 24:</code>
+				</div>
+				<br>
+				<p>You need to do:</p>
+				<div class="code">
+					<code>if num == 5 or num == 7 or num == 24:</code>
+				</div>
+			</div>
+			<br>
+			<p>
+				With <code class="code">if</code>, you can use <code class="code">else</code>. Basically, the code on the indented lines underneath an else statement will only be run if the if statement above (on same indentation level as else) is <code class="code">False</code>.
+			</p>
+			<p>e.g.</p>
+			<div class="code">
+				<code>secretNum = 14</code>
+				<br>
+				<code>guess = int(input("Enter a number: "))</code>
+				<br><br>
+				<code>if guess == secretNum:</code>
+				<br>
+				<code class="indent">print("You guessed the secret number correctly!")</code>
+				<br><br>
+				<code>else:</code>
+				<br>
+				<code class="indent">print("Sorry, you were incorrect")</code>
+			</div>
+			<p>As well as <code class="code">else</code>, there is also something called <code class="code">elif</code>.</p>
+			<p>The code on the indented lines below the <code class="code">elif</code> statement is only run if the <code class="code">elif</code>/<code class="code">if</code> above it (on same indentation) is <code class="code">False</code>. You can think of it like an <code class="code">else</code> with a conditional statement.</p>
+
+			<p>e.g.</p>
+			<div class="code">
+				<code>secretNum = 14</code>
+				<br>
+				<code>guess = int(input("Enter a number: "))</code>
+				<br><br>
+				<code>if guess == secretNum:</code>
+				<br>
+				<code class="indent">print("You guessed the secret number correctly!")</code>
+				<br><br>
+				<code>elif guess >= secretNum - 10 and guess < secretNum:</code>
+				<br>
+				<code class="indent">print("Sorry, you were just beneath it.")</code>
+				<br><br>
+				<code>elif guess <= secretNum + 10 and guess > secretNum:</code>
+				<br>
+				<code class="indent">print("Sorry, you were just above it.")</code>
+				<br><br>
+				<code>else:</code>
+				<br>
+				<code class="indent">print("Sorry, you were incorrect")</code>
+			</div>
+			<br>
+
+			<div class="quote">
+				<p>Make sure that you don't forget the indents or the <code class="code">:</code> at the end of the statement.</p>
+			</div>
+
+			<hr>
+
+			<h1 id="while">While Loop</h1>
+			<p>A while loop is something that will repeat (loop) the code indented below it while the while statement is <code class="code">True</code>.</p>
+
+			<p>e.g.</p>
+
+			<div class="code">
+				<code>password = input("Enter password: ")</code>
+				<br>
+				<code>while password != "password123":</code>
+				<br>
+				<code class="indent">password = input("Invalid. Enter password: ")</code>
+				<br>
+				<code>print("logged in")</code>
+			</div>
+
+
+			<ul>
+				<li>
+					In this example, their input is saved to a variable called 'password'
+				</li>
+				<li>
+					The question is then asked; is password not equal to 'password123'
+				</li>
+				<li>If it is not equal to 'password123' then the indented code will run</li>
+				<li>In this case it will just ask for the user to input a password again</li>
+				<li>It will then go back to statement at the top of the while loop. If this is false, this time, then the indented code will not be run, and it will say that you have logged in</li>
+				<li>If the statement is true, then the indented code will be run again, until the statement is false</li>
+			</ul>
+
+			<hr>
+
+			<h1 id="string">String Manipulation</h1>
+			
+			<p>You can manipulate strings using the positions of the characters in them. These positions are called indices (sing. index).</p>
+			<p>The first character in a string is at index 0.</p>
+			<p>The second character in a string is at index 1 and so on.</p>
+			<p>The last character is at -1.</p>
+			<p>The second to last character is at -2 and so on.</p>
+
+			<h3>How to use</h3>
+			
+			<p>If you want to see what character is at a certain index, what you do, is you write the variable name with the string in (or the string itself) and after it, you put the index that you want to look at, in square brackets.</p>
+			<p>e.g.</p>
+
+			<div class="code">
+				<code>string = "Hello World"</code>
+				<br>
+				<code>print(string[4]) # prints the letter 'o'</code>
+				<br>
+				<code>print(string[-3]) # prints the letter 'r'</code>
+			</div>
+
+			<p>You can also find the letters between a range of indices</p>
+			<p>e.g.</p>
+
+			<div class="code">
+				<code>string  = "Hello World"</code>
+				<br>
+				<code>print(string[2:8]) # prints the string 'llo Wo' (from index 2 to index 8 but not including 8)</code>
+			</div>
+			<br>
+			<div class="quote">
+				<p>Please note that when using the range of indices, that the last index in your selection is not included. If you had: <code class="code">print(string[1:4])</code> then it would print from the index 1, up to but not including index 4.</p>
+			</div>
+
+			<p>If you wanted all of the characters before a certain index, then you would write: <code class="code">string[:num]</code> where num is the index of the fist index that you don't want</p>
+			<p>If you want to find all the characters after a certain index, then you write: <code class="code">string[num:]</code> where num is the index of the first index that you want.</p>
+			<br>
+			<p>There are lots of built in string functions.</p>
+			<p>An example is the <code class="code">len()</code> function, which returns the number of characters (including spaces) in the string in its brackets.</p>
+
+			<p>You can also find some string methods <a href="https://www.w3schools.com/python/python_ref_string.asp">here</a>.</p>
+
+			<hr>
+
+			<h1 id="lists">Lists</h1>
+			<p>A list is something that can hold multiple pieces of data in one variable.</p>
+			<p>An example of a list is:</p>
+			<div class="code">
+				<code>colours = ["red", "green", "blue"]</code>
+			</div>
+
+			<p>To make a list, all you need to do is, inside some square brackets, write your elements separated by commas.</p>
+
+			<h3>How to check if something is in a list</h3>
+			<p>All you need to do, is write:</p>
+			<div class="code">
+				<code>if "green" in colours:</code>
+				<br>
+				<code class="indent">print("The string 'green' is at least 1 of the elements in that list")</code>
+			</div>
+
+			<p>That will also work with strings</p>
+
+			<p>All of the index things that wok for strings, work with lists (see string manipulation <a href="#string">here</a>).</p>
+
+			<hr>
+
+			<h1 id="for">For Loops</h1>
+
+			<p>A for loop is a loop that will repeat a certain amount of times, depending on how you are using it.</p>
+
+			<h3>How to make a for loop:</h3>
+			<p>First, you need to write <code class="code">for</code>, then you will to to make up a variable name (that isn't already being used) which will be changed every time it completes a loop.</p>
+			<p>You will then need to specify how may times it will loop.</p>
+
+			<p>There are 2 ways to do this:</p>
+
+			<p>The first is with the keyword <code class="code">in</code>.</p>
+			<p>This is pretty difficult to explain in words, so here is an example:</p>
+
+			<div class="code">
+				<code>colours = ["green", "red", "blue"]</code><br>
+				<code>for element in colours:</code><br>
+				<code class="indent">print(element)</code>
+			</div>
+
+			<p>Firstly, we are making a list (works with strings as well) called colours, with some strings with colours in.</p>
+			<p>Next, we have our for loop. What is happening, is that we have a variable called element being made and every time that the for loop repeats, that variable (element) will become the next element in the list called colours.</p>
+			<p>It will then print what is stored in the variable 'element', which in this case, will be: 'green' on the first loop, 'red' on the second loop and 'blue' on the third loop.</p>
+			<p>Once it reaches the end of the list, it will stop looping.</p>
+			
+			<br>
+			<p>The next way to use a for loop is with the <code class="code">in range</code> function</p>
+			<p>An example of this is:</p>
+			<div class="code">
+				<code>for loops in range(1,11,1):</code><br>
+				<code class="indent">print("Hello World")</code>
+			</div>
+
+			<p>This code above will print 'Hello World' 10 times.</p>
+
+			<p>How it works:</p>
+			<p>A variable is made again, like you always must when using a for loop.</p>
+			<p>Then the number in the brackets are looked at.</p>
+			<p>The first number in the brackets is what the variable 'loops' will start at.</p>
+			<p>The second number is up to what value the variable 'loops' will reach.</p>
+			<p>The third number is by how much the variable 'loops' will change every loop.</p>
+			<br>
+			<p>Another example:</p>
+			
+			<div class="code">
+				<code>for num in range(20, 31, 2):</code><br>
+				<code class="indent">print(num)</code>
+			</div>
+
+			<p>This will count the even numbers from 20-31, because the first number is 20, the end number is 31, and it steps by 2.</p>
+
+			<p>You can also have negative steps<br>e.g. <code class="code">for num in range(30, 19, -2):</code>
+
+			<div class="quote">
+				<p>By default, the step is 1 and the start value is 0, so if you wanted to loop 10 times you could just write:</p>
+				<code class="code">for num in range(10):</code>
+			</div>
+
+			<hr>
+			
+			<h1 id="libs">Standard Libraries</h1
+			>
+
+			<p>Libraries are things which you can import, so that you can do extra things in/with your code.</p>
+
+			<h3>How to import and use a library</h3>
+			<p>There are 2 ways to use a library.</p>
+
+			<p>Firstly, you can do this:</p>
+			<code class="code">import libraryName</code>
+			<p>And then when you want to use it:</p>
+			<code class="code">libraryName.libraryFunction()</code>
+			<br>
+			<p>The other way is:</p>
+			<code class="code">from libraryName import libraryFunction</code>
+			<p>And then when you want to use it:</p>
+			<code class="code">libraryFunction()</code>
+
+			<h3>Time library</h3>
+
+			<p>The main functions in the time library are:</p>
+			<code class="code">time()</code> and <code class="code">sleep()</code>
+			<br>
+			<p><code class="code">time()</code> will return the amount of time that has passed since 12:00AM 1st January 1970. Normally used to find the amount of time that has passed between 2 points.</p>
+
+			<p><code class="code">sleep()</code> pauses the program for the number of seconds in the brackets.</p>
+			
+			<h3>Random library</h3>
+
+			<p>Main functions are <code class="code">randint()</code> and <code class="code">choice()</code>.</p>
+			<p><code class="code">randint(num1, num2)</code> chooses a random number between num1 and num2.</p>
+			<p><code class="code">choice()</code> chooses a random element in a list (write the list/variable in the brackets).</p>
+
+			<h3>Math library</h3>
+			<p>The main functions are <code class="code">sqrt()</code>, <code class="code">floor()</code> and <code class="code">ceil()</code></p>
+
+			<p><code class="code">sqrt()</code> will square root the number in the brackets.</p>
+			<p><code class="code">floor()</code> will round down the float in the brackets.</p>
+			<p><code class="code">ceil()</code> will round up the float in the brackets.</p>
+
+		</main>
+		<br><br>
+	<script src="script.js"></script>
+  </body>
+</html>
